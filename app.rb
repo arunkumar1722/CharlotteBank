@@ -2,7 +2,7 @@
 require_relative 'models/checking_bank_account'
 require_relative 'models/savings_bank_account'
 
-class Main
+class App
   # Checking Account
   checking_account = CheckingBankAccount.new(rand(10**10).to_s, 'Alejandro Lopez-Perez')
   puts "Account No: #{checking_account.account_no}"
