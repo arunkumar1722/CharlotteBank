@@ -1,10 +1,10 @@
 # Main class to demonstrate Bank Account
-require_relative 'checking_bank_account'
-require_relative 'savings_bank_account'
+require_relative 'models/checking_bank_account'
+require_relative 'models/savings_bank_account'
 
 class Main
   # Checking Account
-  checking_account = CheckingBankAccount.new(rand(10**10).to_s,'Alejandro Lopez-Perez')
+  checking_account = CheckingBankAccount.new(rand(10**10).to_s, 'Alejandro Lopez-Perez')
   puts "Account No: #{checking_account.account_no}"
 
   checking_account.deposit(1500)
@@ -23,7 +23,7 @@ class Main
   puts checking_account.current_balance
 
   # Savings Account
-  savings_account = SavingsBankAccount.new(rand(10**10).to_s,'Sasha Ivanov', 600)
+  savings_account = SavingsBankAccount.new(rand(10**10).to_s, 'Sasha Ivanov', 600)
   puts "Account No: #{savings_account.account_no}"
 
   savings_account.accumulate_interest

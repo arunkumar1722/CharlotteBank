@@ -9,6 +9,8 @@ class SavingsBankAccount < BankAccount
     @account_no = account_no
     @account_holders = account_holders.split(',')
     @current_balance = initial_deposit
+  rescue => e
+    puts e
   end
 
   def deposit(deposit_amount)
